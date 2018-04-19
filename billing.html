@@ -99,6 +99,28 @@ span.price {
   .col-25 {
     margin-bottom: 20px;
   }
+
+  .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+  }
+
+  .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+
+  .closebtn:hover {
+      color: black;
+  }
+
 }
 </style>
 <html>
@@ -169,9 +191,114 @@ a:active {
 					<div id="content" class="12u skel-cell-important">
 						<section>
 							<header>
-								<h2> Results </h2>
+								<h2> Shopping Cart </h2>
 							</header>
-              <form action="/action_page.php">
+              <form action="success.html" method="post">
+
+                <div class="shopping-cart">
+
+                  <div class="product">
+                    <div class="product-image">
+                      <img src="images/membcard.jpg" width="150" height="120">
+                    </div>
+                    <div class="product-details">
+                      <div class="product-title">Family membership Card</div>
+                    </div>
+                    <div class="product-price">420.00</div>
+                    <div class="product-quantity">
+                      <input type="number" value="0" min="1">
+                    </div>
+                    <div class="product-removal">
+                      <button class="remove-product">
+                        Remove
+                      </button>
+                    </div>
+                    <div class="product-line-price">0.00</div>
+                  </div>
+
+                  <div class="product">
+                    <div class="product-image">
+                      <img src="images/membcard.jpg" width="150" height="120">
+                    </div>
+                    <div class="product-details">
+                      <div class="product-title">Monthly Membership Card</div>
+                    </div>
+                    <div class="product-price">30.00</div>
+                    <div class="product-quantity">
+                      <input type="number" value="0" min="1">
+                    </div>
+                    <div class="product-removal">
+                      <button class="remove-product">
+                        Remove
+                      </button>
+                    </div>
+                    <div class="product-line-price">0.00</div>
+                  </div>
+
+                  <div class="product">
+                    <div class="product-image">
+                      <img src="images/protein.jpg" width="150" height="150">
+                    </div>
+                    <div class="product-details">
+                      <div class="product-title">Protein Powder</div>
+                    </div>
+                    <div class="product-price">45.99</div>
+                    <div class="product-quantity">
+                      <input type="number" value="0" min="1">
+                    </div>
+                    <div class="product-removal">
+                      <button class="remove-product">
+                        Remove
+                      </button>
+                    </div>
+                    <div class="product-line-price">0.00</div>
+                  </div>
+
+                  <div class="product">
+                    <div class="product-image">
+                      <img src="images/waterbottle.jpg" width="150" height="120">
+                    </div>
+                    <div class="product-details">
+                      <div class="product-title">Waterbottle</div>
+                    </div>
+                    <div class="product-price">5.00</div>
+                    <div class="product-quantity">
+                      <input type="number" value="0" min="1">
+                    </div>
+                    <div class="product-removal">
+                      <button class="remove-product">
+                        Remove
+                      </button>
+                    </div>
+                    <div class="product-line-price">0.00</div>
+                  </div>
+
+                  <div class="totals">
+                    <div class="totals-item">
+                      <label>Subtotal</label>
+                      <div class="totals-value" id="cart-subtotal">0.00</div>
+                    </div>
+                    <div class="totals-item">
+                      <label>Tax (5%)</label>
+                      <div class="totals-value" id="cart-tax">0.00</div>
+                    </div>
+                    <div class="totals-item">
+                      <label>Shipping</label>
+                      <div class="totals-value" id="cart-shipping">0.00</div>
+                    </div>
+                    <div class="totals-item totals-item-total">
+                      <label>Grand Total</label>
+                      <div class="totals-value" id="cart-total">0.00</div>
+                    </div>
+                  </div>
+
+                </div>
+                  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+                    <script  src="js/index.js"></script>
+
 
                       <div class="row">
                         <div class="col-50">
@@ -229,32 +356,14 @@ a:active {
                       <label>
                         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
                       </label>
-                      <input type="submit" value="Continue to checkout" class="btn">
+                      <input type="submit" value="Submit Order" class="btn" formtarget="_self">
                     </form>
                   </div>
                 </div>
-
-                <div class="col-25">
-                  <div class="container">
-                    <h4>Cart
-                      <span class="price" style="color:black">
-                        <i class="fa fa-shopping-cart"></i>
-                        <b>5</b>
-                      </span>
-                    </h4>
-                    <p><a href="#">Yearly Family Membership</a> <span class="price">$420</span></p>
-                    <p><a href="#">Monthly Membership</a> <span class="price">$30</span></p>
-                    <p><a href="#">Yearly Membership</a> <span class="price">$320</span></p>
-                    <p><a href="#">Protien Powder</a> <span class="price">$30</span></p>
-                    <p><a href="#">Weightlifting Gloves</a> <span class="price">$15</span></p>
-                    <p><a href="#">T-Shirt</a> <span class="price">$1o</span></p>
-                    <p><a href="#">Water Bottle</a> <span class="price">$5</span></p>
-                    <hr>
-                    <p>Total <span class="price" style="color:black"><b>$380</b></span></p>
-                </div>
               </div>
-            </div>
-          </div>
+
+
+
  <!-- Footer -->
         <div id="footer">
             <div class="container">
